@@ -9,119 +9,172 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
-
-        .article-page {
+        .article {
             width: min(900px, 92%);
-            margin: 60px auto 120px;
+            margin: 50px auto 120px;
         }
 
-        .article-page img {
-            width: 100%;
-            max-height: 550px;
-            object-fit: cover;
-            margin: 30px 0;
-        }
-
-        .article-page .back {
+        .article-back {
             display: inline-block;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
             text-decoration: underline;
+            font-size: 15px;
         }
 
-        .article-page h1 {
-            font-size: clamp(36px, 6vw, 70px);
-            line-height: 1.05;
-            margin-bottom: 20px;
+        .article h1 {
+            max-width: 850px;
+            font-size: clamp(38px, 6vw, 68px);
+            line-height: 1.02;
+            margin-bottom: 18px;
         }
 
-        .article-page .article-date {
+        .article-meta {
             color: #666;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
         }
 
-        .article-page p {
+        .article-image {
+            width: 100%;
+            height: auto;
+            margin-bottom: 35px;
+        }
+
+        .article-content {
             max-width: 700px;
+        }
+
+        .article-content p {
             font-size: 18px;
             line-height: 1.7;
-            margin-bottom: 20px;
+            margin-bottom: 22px;
         }
 
+        @media (max-width: 600px) {
+            .article {
+                margin-top: 30px;
+            }
+
+            .article h1 {
+                font-size: 38px;
+            }
+
+            .article-content p {
+                font-size: 17px;
+            }
+        }
     </style>
 </head>
 
 <body>
 
-    <header class="topbar">
+<header class="header">
+    <div class="header-inner">
 
-        <div class="topbar-inner">
+        <a href="index.html" class="logo">
+            sverigesradio
+        </a>
 
-            <div class="sr-logo">
-                sverigesradio
-            </div>
+        <nav>
+            <a href="#">Nyheter</a>
+            <a href="#">Poddar & program</a>
+            <a href="#">Kanaler</a>
+            <a href="#">Mer</a>
+        </nav>
 
-            <nav class="main-nav">
-                <a href="index.html">Nyheter</a>
-                <a href="index.html">Poddar & program</a>
-                <a href="index.html">Kanaler</a>
-                <a href="index.html">Mer⌄</a>
-            </nav>
+        <button class="search">⌕</button>
+        <button class="menu">☰</button>
 
-        </div>
-
-    </header>
+    </div>
+</header>
 
 
-    <main class="article-page">
+<main>
 
-        <a href="index.html" class="back">
-            ← Tillbaka
+    <article class="article">
+
+        <a href="index.html" class="article-back">
+            ← Tillbaka till Sommar & Vinter i P1
         </a>
 
         <h1>
             Här är årets mest lyssnade Sommarprat
         </h1>
 
-        <p class="article-date">
+        <div class="article-meta">
             Sommar & Vinter i P1
-        </p>
+        </div>
 
         <img
-            src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1400&q=80"
-            alt="Sommarprat"
+            class="article-image"
+            src="https://static-cdn.sr.se/images/2071/9cce83dc-eca1-4b06-872e-5b480301efaa.jpg?preset=1200x675"
+            alt="Sommar & Vinter i P1"
         >
 
-        <p>
-            Här kan du skriva din egen text om den senaste nyheten.
-        </p>
-
-        <p>
-            Det här är en separat sida som öppnas när besökaren
-            klickar på den stora senaste-rutan på startsidan.
-        </p>
-
-        <p>
-            Du kan ändra rubrik, bild och text precis som du vill
-            för din skoluppgift.
-        </p>
-
-    </main>
-
-
-    <footer>
-
-        <div class="footer-inner">
-
-            <div class="footer-logo">
-                sverigesradio
-            </div>
+        <div class="article-content">
 
             <p>
-                © Sveriges Radio
+                Här kan du lägga in texten till din senaste nyhet.
+            </p>
+
+            <p>
+                Den här sidan öppnas när besökaren klickar på den
+                stora senaste-rutan på startsidan.
+            </p>
+
+            <p>
+                Du kan enkelt ändra rubrik, bild och text för att
+                anpassa sidan till din skoluppgift.
             </p>
 
         </div>
 
-    </footer>
+    </article>
+
+</main>
+
+
+<footer>
+
+    <div class="footer-inner">
+
+        <div class="footer-logo">
+            sverigesradio
+        </div>
+
+        <div class="footer-links">
+            <a href="index.html">Sommar & Vinter i P1</a>
+            <a href="#">Om Sveriges Radio</a>
+            <a href="#">Kontakta oss</a>
+            <a href="#">Integritet</a>
+            <a href="#">Tillgänglighet</a>
+        </div>
+
+        <p>
+            Copyright Sveriges Radio 2026
+        </p>
+
+    </div>
+
+</footer>
+
+
+<div class="player">
+
+    <button>◀</button>
+
+    <button class="player-main">
+        ▶
+    </button>
+
+    <div class="progress">
+        <div></div>
+    </div>
+
+    <span>00:00</span>
+
+    <button>🔊</button>
+
+</div>
 
 </body>
 </html>
