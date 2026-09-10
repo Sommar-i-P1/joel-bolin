@@ -1,239 +1,492 @@
-
+<!DOCTYPE html>
 <html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sommar & Vinter i P1</title>
-
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            background: #111;
-            color: white;
-            font-family: Arial, sans-serif;
-        }
-
-        header {
-            height: 50px;
-            background: #090909;
-            display: flex;
-            align-items: center;
-            padding: 0 25%;
-            gap: 30px;
-        }
-
-        .logo {
-            font-size: 18px;
-            color: #aaa;
-        }
-
-        nav {
-            display: flex;
-            gap: 20px;
-            font-size: 12px;
-        }
-
-        .hero {
-            height: 150px;
-            background: linear-gradient(
-                rgba(0,0,0,.45),
-                rgba(0,0,0,.85)
-            );
-            padding: 65px 25%;
-        }
-
-        .hero h1 {
-            font-size: 24px;
-        }
-
-        .container {
-            width: 500px;
-            margin: 0 auto;
-        }
-
-        .content {
-            display: grid;
-            grid-template-columns: 315px 175px;
-            gap: 10px;
-        }
-
-        .main {
-            background: #151515;
-        }
-
-        .program-image {
-            width: 100%;
-            height: 290px;
-            object-fit: cover;
-        }
-
-        .main h2 {
-            font-size: 18px;
-            padding: 10px;
-        }
-
-        .people {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2px;
-            padding: 4px;
-        }
-
-        .people img {
-            width: 100%;
-            height: 48px;
-            object-fit: cover;
-        }
-
-        .episodes {
-            border: 1px solid #292929;
-            background: #111;
-        }
-
-        .episodes h2 {
-            font-size: 16px;
-            padding: 10px;
-            border-bottom: 1px solid #292929;
-        }
-
-        .episode {
-            display: flex;
-            align-items: center;
-            gap: 7px;
-            padding: 10px;
-            border-bottom: 1px solid #292929;
-            font-size: 10px;
-        }
-
-        .episode .circle {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: white;
-            color: black;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .player {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 45px;
-            background: #080808;
-            border-top: 1px solid #292929;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .play {
-            font-size: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
-        <div class="logo">sverigesradio</div>
+    <!-- =========================
+         TOPPMENY
+    ========================== -->
 
-        <nav>
-            <span>Nyheter</span>
-            <span>Poddar & program</span>
-            <span>Kanaler</span>
-            <span>Mer⌄</span>
-        </nav>
+    <header class="topbar">
+        <div class="topbar-inner">
+
+            <div class="sr-logo">
+                sverigesradio
+            </div>
+
+            <nav class="main-nav">
+                <a href="#">Nyheter</a>
+                <a href="#">Poddar & program</a>
+                <a href="#">Kanaler</a>
+                <a href="#">Mer⌄</a>
+            </nav>
+
+            <button class="menu-button">☰</button>
+
+        </div>
     </header>
 
-    <section class="hero">
-        <h1>Sommar & Vinter i P1</h1>
-    </section>
 
-    <main class="container">
+    <!-- =========================
+         PROGRAMHEADER
+    ========================== -->
 
-        <div class="content">
+    <section class="program-header">
 
-            <section class="main">
+        <div class="program-header-inner">
 
-                <img
-                    class="program-image"
-                    src="https://picsum.photos/600/500"
-                    alt="Sommarpratare"
-                >
+            <img
+                class="program-cover"
+                src="https://static-cdn.sr.se/images/2071/9cce83dc-eca1-4b06-872e-5b480301efaa.jpg?preset=256x256"
+                alt="Sommar och Vinter i P1"
+            >
 
-                <h2>Här är årets mest lyssnade Sommarprat</h2>
+            <div class="program-info">
 
-                <div class="people">
-                    <img src="https://picsum.photos/100/100?1">
-                    <img src="https://picsum.photos/100/100?2">
-                    <img src="https://picsum.photos/100/100?3">
-                    <img src="https://picsum.photos/100/100?4">
-                    <img src="https://picsum.photos/100/100?5">
-                    <img src="https://picsum.photos/100/100?6">
-                    <img src="https://picsum.photos/100/100?7">
-                    <img src="https://picsum.photos/100/100?8">
+                <div class="breadcrumbs">
+                    P1
                 </div>
 
-            </section>
+                <h1>Sommar & Vinter i P1</h1>
 
-            <aside class="episodes">
+                <p>Samhälle och kultur</p>
 
-                <h2>Senaste avsnitt</h2>
+                <p class="description">
+                    Sveriges största podd med personliga berättelser
+                    som definierar vår tid.
+                </p>
 
-                <div class="episode">
-                    <span class="circle">▶</span>
-                    <div>
-                        <b>Niklas Rådström</b><br>
-                        66 min
-                    </div>
-                </div>
-
-                <div class="episode">
-                    <span class="circle">▶</span>
-                    <div>
-                        <b>Felicia Eriksson</b><br>
-                        57 min
-                    </div>
-                </div>
-
-                <div class="episode">
-                    <span class="circle">▶</span>
-                    <div>
-                        <b>Sofia Dalén</b><br>
-                        68 min
-                    </div>
-                </div>
-
-                <div class="episode">
-                    <span class="circle">▶</span>
-                    <div>
-                        <b>Mohamed Fashame</b><br>
-                        65 min
-                    </div>
-                </div>
-
-            </aside>
+            </div>
 
         </div>
 
+    </section>
+
+
+    <!-- =========================
+         HUVUDINNEHÅLL
+    ========================== -->
+
+    <main class="page-container">
+
+
+        <!-- =========================
+             DIN STORA SENASTE-RUTA
+
+             ÄNDRA ENDAST:
+             1. bilden
+             2. rubriken
+             3. länken
+        ========================== -->
+
+        <section class="latest-section">
+
+            <h2>Senaste</h2>
+
+            <a
+                href="artikel.html"
+                class="latest-card"
+            >
+
+                <img
+                    src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1400&q=80"
+                    alt="Senaste nyheten"
+                    class="latest-image"
+                >
+
+                <div class="latest-overlay">
+
+                    <div>
+                        <span class="latest-label">
+                            SENASTE
+                        </span>
+
+                        <h3>
+                            Här är årets mest lyssnade Sommarprat
+                        </h3>
+
+                        <p>
+                            Klicka här för att läsa mer.
+                        </p>
+                    </div>
+
+                    <span class="arrow">
+                        →
+                    </span>
+
+                </div>
+
+            </a>
+
+        </section>
+
+
+        <!-- =========================
+             NYHETER
+        ========================== -->
+
+        <section class="news-section">
+
+            <h2>Nyheter från Sommar & Vinter i P1</h2>
+
+            <div class="news-grid">
+
+                <a href="artikel.html" class="news-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&w=900&q=80"
+                        alt="Nyhet"
+                    >
+
+                    <div class="news-card-text">
+
+                        <span>Sommar & Vinter i P1</span>
+
+                        <h3>
+                            Här är årets mest lyssnade Sommarprat
+                        </h3>
+
+                    </div>
+
+                </a>
+
+
+                <a href="artikel.html" class="news-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1516321165247-4aa89a48be28?auto=format&fit=crop&w=900&q=80"
+                        alt="Sommarpratare"
+                    >
+
+                    <div class="news-card-text">
+
+                        <span>Sommar & Vinter i P1</span>
+
+                        <h3>
+                            Årets Sommarpratare 2026
+                        </h3>
+
+                        <p>
+                            Nu är alla årets Sommarvärdar presenterade.
+                        </p>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SENASTE AVSNITT
+        ========================== -->
+
+        <section class="episodes-section">
+
+            <div class="section-heading">
+
+                <h2>Senaste avsnitt</h2>
+
+                <a href="#">
+                    Alla avsnitt
+                </a>
+
+            </div>
+
+
+            <div class="episode-list">
+
+
+                <article class="episode">
+
+                    <img
+                        src="https://static-cdn.sr.se/images/2071/0d6b8a65-6f9c-4a3c-bd2f-3f7e1e6b2a89.jpg?preset=256x256"
+                        alt="Niklas Rådström"
+                    >
+
+                    <div class="episode-info">
+
+                        <h3>Niklas Rådström</h3>
+
+                        <p class="episode-meta">
+                            66 min · sön 16 aug kl 07.00
+                        </p>
+
+                        <p>
+                            Författaren om nyfikenhet, åldrande och kärlek.
+                        </p>
+
+                    </div>
+
+                    <button class="play-button">
+                        ▶
+                    </button>
+
+                </article>
+
+
+                <article class="episode">
+
+                    <img
+                        src="https://static-cdn.sr.se/images/2071/7c2e9d44-7b27-4e7a-ae9d-8e4d4a1f5f55.jpg?preset=256x256"
+                        alt="Felicia Eriksson"
+                    >
+
+                    <div class="episode-info">
+
+                        <h3>Felicia Eriksson</h3>
+
+                        <p class="episode-meta">
+                            57 min · lör 15 aug kl 07.00
+                        </p>
+
+                        <p>
+                            Artisten om masken, den turbulenta tiden som Fröken Snusk och vägen framåt.
+                        </p>
+
+                    </div>
+
+                    <button class="play-button">
+                        ▶
+                    </button>
+
+                </article>
+
+
+                <article class="episode">
+
+                    <img
+                        src="https://static-cdn.sr.se/images/2071/3c4c6b2d-6f3a-4f1a-a9f3-5b7d9f1e7d22.jpg?preset=256x256"
+                        alt="Sofia Dalén"
+                    >
+
+                    <div class="episode-info">
+
+                        <h3>Sofia Dalén</h3>
+
+                        <p class="episode-meta">
+                            68 min · fre 14 aug kl 07.00
+                        </p>
+
+                        <p>
+                            Komikern kliver ur sin komfortzon.
+                        </p>
+
+                    </div>
+
+                    <button class="play-button">
+                        ▶
+                    </button>
+
+                </article>
+
+
+                <article class="episode">
+
+                    <img
+                        src="https://static-cdn.sr.se/images/2071/4c8c7b2a-6b1d-4d6a-a2f8-2e5f8c7d3a11.jpg?preset=256x256"
+                        alt="Mohammad Fazlhashemi"
+                    >
+
+                    <div class="episode-info">
+
+                        <h3>Mohammad Fazlhashemi</h3>
+
+                        <p class="episode-meta">
+                            65 min · tor 13 aug kl 07.00
+                        </p>
+
+                        <p>
+                            Om livet, samhället och människans möjligheter.
+                        </p>
+
+                    </div>
+
+                    <button class="play-button">
+                        ▶
+                    </button>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             OM SOMMAR
+        ========================== -->
+
+        <section class="info-section">
+
+            <img
+                src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1200&q=80"
+                alt="Sommar"
+            >
+
+            <div>
+
+                <h2>Om Sommar i P1</h2>
+
+                <p>
+                    Svar på de vanligaste frågorna om Sommar i P1
+                    och Vinter i P1.
+                </p>
+
+                <a href="#">
+                    Läs mer →
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             HISTORIA
+        ========================== -->
+
+        <section class="history-section">
+
+            <div>
+
+                <span class="small-title">
+                    SOMMARS HISTORIA
+                </span>
+
+                <h2>
+                    Så här började det
+                </h2>
+
+                <p>
+                    Sommar i P1 har sänts sedan 1959 och har blivit
+                    en av Sveriges mest älskade radiotraditioner.
+                </p>
+
+                <a href="#">
+                    Läs mer →
+                </a>
+
+            </div>
+
+            <img
+                src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=1000&q=80"
+                alt="Radiostudio"
+            >
+
+        </section>
+
+
+        <!-- =========================
+             OM PROGRAMMET
+        ========================== -->
+
+        <section class="about-section">
+
+            <h2>Om Sommar & Vinter i P1</h2>
+
+            <p>
+                Sveriges största podd med personliga berättelser
+                som definierar vår tid.
+            </p>
+
+            <p>
+                Sänds i P1 kl. 13.00 under sommaren.
+                Podden finns även tillgänglig digitalt.
+                Vinter i P1 sänds från och med 25 december.
+            </p>
+
+            <div class="about-links">
+
+                <div>
+                    <strong>E-post</strong>
+                    <a href="mailto:sommar@sverigesradio.se">
+                        sommar@sverigesradio.se
+                    </a>
+                </div>
+
+                <div>
+                    <strong>Följ via</strong>
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                </div>
+
+                <div>
+                    <strong>Prenumerera</strong>
+                    <a href="#">Poddradio</a>
+                </div>
+
+            </div>
+
+        </section>
+
     </main>
 
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="footer-inner">
+
+            <div class="footer-logo">
+                sverigesradio
+            </div>
+
+            <div class="footer-links">
+
+                <a href="#">Om Sveriges Radio</a>
+                <a href="#">Kontakta oss</a>
+                <a href="#">Integritet</a>
+                <a href="#">Tillgänglighet</a>
+
+            </div>
+
+            <p>
+                © Sveriges Radio
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================
+         NEDRE SPELARE
+    ========================== -->
+
     <div class="player">
-        <span>◀</span>
-        <span>◀</span>
-        <span class="play">▶</span>
-        <span>▶</span>
-        <span>Volym 🔊</span>
+
+        <button>◀◀</button>
+
+        <button class="player-play">
+            ▶
+        </button>
+
+        <div class="player-progress">
+            <div class="player-progress-bar"></div>
+        </div>
+
+        <span class="player-time">
+            00:00
+        </span>
+
+        <button>
+            🔊
+        </button>
+
     </div>
+
 
 </body>
 </html>
